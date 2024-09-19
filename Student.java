@@ -3,6 +3,7 @@ public class Student
     private String  name;
     private int     alter;
     private String  religion;
+    private boolean matura;
     
     public void setName(String neuName)
     {

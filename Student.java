@@ -5,6 +5,14 @@ public class Student
     private String  religion;
     private boolean matura;
     
+    public Student(String neuName, int neuAlter, String neuReligion, boolean neuMatura)
+    {
+        setName(neuName);
+        setAlter(neuAlter);
+        setReligion(neuReligion);
+        setMatura(neuMatura);
+    }
+    
     public void setName(String neuName)
     {
         name = neuName;
@@ -18,6 +26,11 @@ public class Student
     public void setReligion(String neuReligion)
     {
         religion = neuReligion;
+    }
+    
+    public void setMatura(boolean neuMatura)
+    {
+        matura = neuMatura;
     }
 
     public String getName()
@@ -33,5 +46,10 @@ public class Student
     public String getReligion()
     {
         return religion;
+    }
+    
+    public boolean getMatura()
+    {
+        return matura;
     }
 }

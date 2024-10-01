@@ -1,10 +1,11 @@
 public class Student 
 {
-    private String  name;
-    private int     alter;
-    private String  religion;
+    private String  name;           // Name des Studierenden
+    private int     alter;          // Alter des Studierenden
+    private String  religion;       // ...
     private boolean matura;
     
+    // Constructor
     public Student(String neuName, int neuAlter, String neuReligion, boolean neuMatura)
     {
         setName(neuName);
@@ -15,6 +16,10 @@ public class Student
     
     public void setName(String neuName)
     {
+        /*
+         * Die Eigenschaft name wird überschrieben mit dem
+         * Wert des Parameters.
+         */
         name = neuName;
     }
 

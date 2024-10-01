@@ -57,4 +57,9 @@ public class Student
     {
         return matura;
     }
+    
+    public void printStudent()
+    {
+        System.out.println(name + ": " + alter + " Jahre, Rel: " + religion + ", Matura: " + matura);
+    }
 }

@@ -1,0 +1,52 @@
+Susi: 29 Jahre, Rel: rk, Matura: true
+
+
+
+Susi:_29_Jahre,_Rel:_rk,_Matura:_true
+
+
+
+Susi
+:_
+29
+_Jahre,_Rel:_
+rk
+,_Matura:_
+true
+
+
+
+name
+:_
+alter
+_Jahre,_Rel:_
+religion
+,_Matura:_
+matura
+
+
+
+name
+":_"
+alter
+"_Jahre,_Rel:_"
+religion
+",_Matura:_"
+matura
+
+
+
+name + ":_" + alter + "_Jahre,_Rel:_" + religion + ",_Matura:_" + matura
+
+
+
+System.out.println("Hallo Thomas!");
+
+
+
+System.out.println(name + ":_" + alter + "_Jahre,_Rel:_" + religion + ",_Matura:_" + matura);
+
+
+
+System.out.println(name + ": " + alter + " Jahre, Rel: " + religion + ", Matura: " + matura);
+

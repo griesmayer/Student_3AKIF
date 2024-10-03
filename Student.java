@@ -6,25 +6,25 @@ public class Student
     private boolean matura;
     
     // Constructor
-    public Student(String neuName, int neuAlter, String neuReligion, boolean neuMatura)
+    public Student(String name, int alter, String religion, boolean matura)
     {
-        setName(neuName);
-        setAlter(neuAlter);
-        setReligion(neuReligion);
-        setMatura(neuMatura);
+        setName(name);
+        setAlter(alter);
+        setReligion(religion);
+        setMatura(matura);
     }
     
-    public Student(String neuName,int neuAlter, String neuReligion)
+    public Student(String name,int alter, String religion)
     {
-        setName(neuName);
-        setAlter(neuAlter);
-        setReligion(neuReligion);
+        setName(name);
+        setAlter(alter);
+        setReligion(religion);
         setMatura(false);
     }
     
-    public Student(String neuName)
+    public Student(String name)
     {
-        setName(neuName);
+        setName(name);
         setAlter(14);
         setReligion("ob");
         setMatura(false);       
@@ -38,28 +38,24 @@ public class Student
         setMatura(false);
     }
     
-    public void setName(String neuName)
+    public void setName(String name)
     {
-        /*
-         * Die Eigenschaft name wird überschrieben mit dem
-         * Wert des Parameters.
-         */
-        name = neuName;
+        this.name = name;
     }
 
-    public void setAlter(int neuAlter)
+    public void setAlter(int alter)
     {
-        alter = neuAlter;
+        this.alter = alter;
     }
 
-    public void setReligion(String neuReligion)
+    public void setReligion(String religion)
     {
-        religion = neuReligion;
+        this.religion = religion;
     }
     
-    public void setMatura(boolean neuMatura)
+    public void setMatura(boolean matura)
     {
-        matura = neuMatura;
+        this.matura = matura;
     }
 
     public String getName()

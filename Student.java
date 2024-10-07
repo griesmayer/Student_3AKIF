@@ -80,6 +80,23 @@ public class Student
     
     public void printStudent()
     {
-        System.out.println(name + ": " + alter + " Jahre, Rel: " + religion + ", Matura: " + matura);
+        if (matura == true)
+        {
+            System.out.println(name + ": " + alter + " Jahre, Rel: " + religion + ", Matura");
+        }
+        else
+        {
+            System.out.println(name + ": " + alter + " Jahre, Rel: " + religion + ", keine Matura");
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+

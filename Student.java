@@ -77,37 +77,22 @@ public class Student
     {
         return matura;
     }
-    /*
-    public int getLength()
-    {
-        int erg;
-        
-        erg = name.length();
-        
-        return erg;
-    }
-    */
-    public String getAccount()
-    {
-        String erg;
-        
-        erg = name.substring(0,4);
-        
-        return erg;
-    }
     
     public String getInitialen()
     {
-        String erg;
+        String initialen;
         int pos;
         
-        erg = "" + name.charAt(0);
-        pos = name.indexOf(' ')+1;
-        erg = erg + name.charAt(pos);
+        initialen = name.substring(0, 1);
+        pos = name.indexOf(" ") + 1;
+        //"Max " + "Griesmayer" => "Max Griesmayer"
+        //"M" + "G" => "MG"
+        initialen = initialen + name.substring(pos,pos+1);
+        initialen = initialen.toLowerCase();
         
-        return erg;
+        return initialen;
     }
-    
+
     public void printStudent()
     {
         if (matura == true)

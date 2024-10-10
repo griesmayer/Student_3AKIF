@@ -45,7 +45,17 @@ public class Student
 
     public void setAlter(int alter)
     {
-        this.alter = alter;
+        // 12 .. 65
+        
+        if ((alter >= 12) && (alter <= 65))
+        {
+            this.alter = alter;
+        }
+        else
+        {
+            System.out.println("Fehler: ungültiges Alter. Das Alter muss zwischen 12 und 65 sein!");
+            this.alter = 14;
+        }
     }
 
     public void setReligion(String religion)

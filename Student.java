@@ -6,36 +6,66 @@ public class Student
     private boolean matura;
     
     // Constructor
-    public Student(String neuName, int neuAlter, String neuReligion, boolean neuMatura)
+    public Student(String name, int alter, String religion, boolean matura)
     {
-        setName(neuName);
-        setAlter(neuAlter);
-        setReligion(neuReligion);
-        setMatura(neuMatura);
+        setName(name);
+        setAlter(alter);
+        setReligion(religion);
+        setMatura(matura);
     }
     
-    public void setName(String neuName)
+    public Student(String name,int alter, String religion)
     {
-        /*
-         * Die Eigenschaft name wird überschrieben mit dem
-         * Wert des Parameters.
-         */
-        name = neuName;
-    }
-
-    public void setAlter(int neuAlter)
-    {
-        alter = neuAlter;
-    }
-
-    public void setReligion(String neuReligion)
-    {
-        religion = neuReligion;
+        setName(name);
+        setAlter(alter);
+        setReligion(religion);
+        setMatura(false);
     }
     
-    public void setMatura(boolean neuMatura)
+    public Student(String name)
     {
-        matura = neuMatura;
+        setName(name);
+        setAlter(14);
+        setReligion("ob");
+        setMatura(false);       
+    }
+    
+    public Student()
+    {
+        setName("UNKN");
+        setAlter(14);
+        setReligion("ob");
+        setMatura(false);
+    }
+    
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+    public void setAlter(int alter)
+    {
+        // 12 .. 65
+        
+        if ((alter >= 12) && (alter <= 65))
+        {
+            this.alter = alter;
+        }
+        else
+        {
+            System.out.println("Fehler: ungültiges Alter. Das Alter muss zwischen 12 und 65 sein!");
+            this.alter = 14;
+        }
+    }
+
+    public void setReligion(String religion)
+    {
+        this.religion = religion;
+    }
+    
+    public void setMatura(boolean matura)
+    {
+        this.matura = matura;
     }
 
     public String getName()
@@ -58,8 +88,40 @@ public class Student
         return matura;
     }
     
+    public String getInitialen()
+    {
+        String initialen;
+        int pos;
+        
+        initialen = name.substring(0, 1);
+        pos = name.indexOf(" ") + 1;
+        //"Max " + "Griesmayer" => "Max Griesmayer"
+        //"M" + "G" => "MG"
+        initialen = initialen + name.substring(pos,pos+1);
+        initialen = initialen.toLowerCase();
+        
+        return initialen;
+    }
+
     public void printStudent()
     {
-        System.out.println(name + ": " + alter + " Jahre, Rel: " + religion + ", Matura: " + matura);
+        if (matura == true)
+        {
+            System.out.println(name + ": " + alter + " Jahre, Rel: " + religion + ", Matura");
+        }
+        else
+        {
+            System.out.println(name + ": " + alter + " Jahre, Rel: " + religion + ", keine Matura");
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+

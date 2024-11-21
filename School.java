@@ -30,6 +30,47 @@ public class School
         }
     }
     
+    public void abmeldenJungerStudent()
+    {
+        Student wer;
+        
+        wer = jungerStudent();
+        if (wer != null)
+        {
+            abmelden(wer);
+        }
+        else
+        {
+            System.out.println("Fehler: kein Student!");
+        }
+    }
+    
+    public void abmelden(Student wer)
+    {
+        if (sessel0 == wer)
+        {
+            sessel0 = null;
+        }
+        else
+        {
+            if (sessel1 == wer)
+            {
+                sessel1 = null;
+            }
+            else
+            {
+                if (sessel2 == wer)
+                {
+                    sessel2 = null;
+                }
+                else
+                {
+                    System.out.println("Fehler: nicht in dieser Schule!");
+                }
+            }
+        }
+    }
+    
     public void printSchool()
     {
         if (sessel0 != null)
@@ -75,9 +116,39 @@ public class School
         return max;
     }
     
-    public int jungerStudent()
+    public Student jungerStudent()
     {
-        return 0;
+        int min;
+        Student wer;
+        
+        min = 999;
+        wer = null;
+        if (sessel0 != null)
+        {
+            if (sessel0.getAlter() < min)
+            {
+                min = sessel0.getAlter();
+                wer = sessel0;
+            }
+        }
+        if (sessel1 != null)
+        {
+            if (sessel1.getAlter() < min)
+            {
+                min = sessel1.getAlter();
+                wer = sessel1;
+            }
+        }
+        if (sessel2 != null)
+        {
+            if (sessel2.getAlter() < min)
+            {
+                min = sessel2.getAlter();
+                wer = sessel2;
+            }
+        }
+        
+        return wer;
     }
 }
 
